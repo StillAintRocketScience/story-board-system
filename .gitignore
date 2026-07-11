@@ -1,0 +1,20 @@
+# secrets — never leave this machine
+**/.env
+!**/.env.example
+**/.deploy_gate.json
+**/secrets/
+*.key
+*.pem
+id_rsa*
+
+# local snapshots / archives
+*.zip
+
+# editor / tool state
+.claude/
+.obsidian/
+
+# OS / editor cruft
+Thumbs.db
+Desktop.ini
+.DS_Store
