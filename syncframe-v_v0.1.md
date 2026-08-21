@@ -1,3 +1,11 @@
+---
+id: okf://storyboard/syncframe-v-v0-1
+title: SYNCFRAME-V v0.1
+type: Agent Spec
+status: committed
+version: 0.1
+source: storyboard — STORY BOARD SYSTEM/
+---
 # SYNCFRAME-V v0.1
 *Performance Sync Layer — Vocal/Physical Performance Lock for Storyboard + Motion Prompt Generation, built per Universal Build Framework v1.0*
 

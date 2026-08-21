@@ -1,3 +1,10 @@
+---
+id: okf://storyboard/storyframe-v-validation-run
+title: STORYFRAME-V v1.0.0 — Validation Run
+type: Validation Record
+status: draft
+source: storyboard — STORY BOARD SYSTEM/
+---
 # STORYFRAME-V v1.0.0 — Validation Run
 *Test execution against Nike Air Force 1 Triple White campaign*
 

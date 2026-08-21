@@ -1,3 +1,10 @@
+---
+id: okf://storyboard/modec-roundtrip-validation-run
+title: STORYFRAME-V v1.2 Mode C ↔ SYNCFRAME-V v0.1 — Round-Trip Validation Run
+type: Validation Record
+status: draft
+source: storyboard — STORY BOARD SYSTEM/
+---
 # STORYFRAME-V v1.2 Mode C ↔ SYNCFRAME-V v0.1 — Round-Trip Validation Run
 *Paper execution of the delegation chain, fed by SONGMAP-V's section-4 package*
 

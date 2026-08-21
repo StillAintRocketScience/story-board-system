@@ -1,4 +1,5 @@
 ---
+okf: exempt
 name: storyboard-prompt-builder
 description: >
   Generate two-phase storyboard prompts from character references and a story overview — first an image prompt that produces a professional multi-panel storyboard sheet, then a cinematic video prompt that expands each panel into directed animation/live-action beats. Use this skill whenever the user wants a storyboard, a storyboard sheet, a visual story breakdown, a panel-by-panel scene layout, or asks for a "storyboard prompt." Also trigger when the user says "storyboard for," "break this story into panels," "storyboard sheet," "visual story prompt," "panel layout," or uploads character references and asks for a storyboard. Trigger when the user mentions storyboard in combination with any image or video generation tool (Nano Banana Pro, GPT Image, Midjourney, DALL-E, Seedance, Kling, Sora, Veo, Runway, Luma, Hailuo, Wan, Higgsfield, Flux). Also trigger if the user asks to turn a story idea into a visual production document or shot sheet. Works for any visual style — 3D animation, live-action, anime, 2D animation, stop-motion, editorial, comic book, or any other aesthetic.

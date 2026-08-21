@@ -1,3 +1,10 @@
+---
+id: okf://storyboard/songmap-v-validation-run
+title: SONGMAP-V v0.2.0 — Validation Run
+type: Validation Record
+status: committed
+source: storyboard — STORY BOARD SYSTEM/
+---
 # SONGMAP-V v0.2.0 — Validation Run
 *Paper execution against original test song "Static in the Signal"*
 

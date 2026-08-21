@@ -1,3 +1,11 @@
+---
+id: okf://storyboard/storyframe-v-v1-3
+title: STORYFRAME-V v1.3
+type: Agent Spec
+status: committed
+version: 1.3
+source: storyboard — STORY BOARD SYSTEM/
+---
 # STORYFRAME-V v1.3
 *Storyboard + Motion Prompt Generation Agent — built per Universal Build Framework v1.0*
 

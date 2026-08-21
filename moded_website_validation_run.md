@@ -1,3 +1,10 @@
+---
+id: okf://storyboard/moded-website-validation-run
+title: STORYFRAME-V v1.3 Mode D — Website Validation Run
+type: Validation Record
+status: draft
+source: storyboard — STORY BOARD SYSTEM/
+---
 # STORYFRAME-V v1.3 Mode D — Website Validation Run
 *Paper execution of the Website mode: one NAICS client round-trip (non-chained), one SARS Lookbook round-trip (chained), plus seeded-failure input tests*
 

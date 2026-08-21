@@ -1,3 +1,11 @@
+---
+id: okf://storyboard/songmap-v-v0-2
+title: SONGMAP-V v0.2
+type: Agent Spec
+status: committed
+version: 0.2
+source: storyboard — STORY BOARD SYSTEM/
+---
 # SONGMAP-V v0.2
 *Full-Song Placement Director — Section-by-Section Production Treatment Analysis, built per Universal Build Framework v1.0*
 
