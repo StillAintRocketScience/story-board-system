@@ -68,6 +68,16 @@ COMPLEXITY_LEVEL:   High
 - NOT INCLUDED: consolidation of `storyboard-prompt-builder.md`. That
   remains the separate, still-parked 2026-07-04 decision.
 
+[2026-09-23 - documentation, no version bump]
+- Consolidation decision resolved (Sir, Option B: delimit, not consolidate).
+  5.7's provenance note updated: the parked do-not-fork rule is replaced by
+  a one-way pointer - shot vocabulary flows canon -> builder, never the
+  reverse. 9.2 trigger updated from unresolved to resolved.
+- No functional change: no field, token, rule or behavior altered. Follows
+  the v1.3 "[2026-07-04 - status change, no version bump]" precedent.
+- The builder now defers its shot vocabulary to 5.2 + 5.7 and states its
+  grid notation explicitly (collisions C1/C2). Nothing moved INTO this spec.
+
 [2026-09-23 - validation + status change]
 - Sir conditioned sign-off on paper validation first. The run FAILED on its
   first pass: retro-tagging a REAL produced 15-frame set (Nike AF1, from
@@ -707,9 +717,15 @@ with its size, its angle, and whether the subject faces camera all unstated.
 
 > **Provenance, stated plainly (binding).** Counts were taken across the **five canon specs only** —
 > `storyframe-v_v1.1/v1.2/v1.3`, `syncframe-v_v0.1`, `songmap-v_v0.2`. **`storyboard-prompt-builder.md`
-> was excluded from the count and is not a source:** it carries a standing *"do not fork logic from here
-> into the family specs"* instruction and a parked 2026-07-04 consolidation decision, both of which
-> survive this version. It is cited once above as independent *evidence of need*, which is not a fork.
+> was excluded from the count and is not a source.** It is cited once above as independent *evidence of
+> need*, which is not a fork.
+>
+> **Update 2026-09-23 — the parked consolidation decision is RESOLVED** (Sir, Option B: *delimit, not
+> consolidate*; see `THE SANDBOX/10-ACTIVE/STORYBOARD_BUILDER_CONSOLIDATION_v0.1.md`). The two artifacts
+> overlap in mechanism but not domain — STORYFRAME-V owns **commercial / product / website**, the builder
+> owns **narrative / animation / character story**. The old bidirectional do-not-fork rule is replaced by
+> a one-way pointer: **shot vocabulary flows canon → builder, never the reverse.** The builder's local
+> 8-item shot list has been retired in favour of §5.2 + §5.7. Nothing from the builder entered this spec.
 
 > **⚠ Honesty marker.** `[n]` = occurrences in those five files today. **`[ADDED]`** = **zero** current
 > occurrences, included only to complete an otherwise-gapped dimension. Do not read `[ADDED]` as
@@ -937,7 +953,7 @@ Unchanged from v1.1/v1.2. **Mode D qualifies as MINOR, not MAJOR, on the Mode C 
 - New website archetype pattern appears ≥2× in real briefs without a §5.6 fit → MINOR taxonomy addition
 - New camera or subject-state term appears ≥2× in real builds without a §5.7 fit → MINOR taxonomy addition (§5.7 R6) — this is the route back for the tokens cut in the v1.4 scope trim
 - A §5.2 token and a §5.7 token observed competing for the same frame slot in production → evaluate reconciling intent against grammar (MINOR; R0/R7 currently forbid touching §5.2)
-- `storyboard-prompt-builder.md` consolidation resolved by Sir → MINOR or MAJOR by scope; §5.7's provenance note retires at that point
+- `storyboard-prompt-builder.md` consolidation — **RESOLVED 2026-09-23 (Option B: delimit, not consolidate).** Re-opens only if the domain split stops holding — e.g. STORYFRAME-V is asked for narrative/animation work, or the builder for a commercial spot. Either would be a MINOR routing-rule revision, not a merge
 
 ### 9.3 Performance Monitoring
 

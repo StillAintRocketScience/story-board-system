@@ -5,9 +5,25 @@ description: >
   Generate two-phase storyboard prompts from character references and a story overview — first an image prompt that produces a professional multi-panel storyboard sheet, then a cinematic video prompt that expands each panel into directed animation/live-action beats. Use this skill whenever the user wants a storyboard, a storyboard sheet, a visual story breakdown, a panel-by-panel scene layout, or asks for a "storyboard prompt." Also trigger when the user says "storyboard for," "break this story into panels," "storyboard sheet," "visual story prompt," "panel layout," or uploads character references and asks for a storyboard. Trigger when the user mentions storyboard in combination with any image or video generation tool (Nano Banana Pro, GPT Image, Midjourney, DALL-E, Seedance, Kling, Sora, Veo, Runway, Luma, Hailuo, Wan, Higgsfield, Flux). Also trigger if the user asks to turn a story idea into a visual production document or shot sheet. Works for any visual style — 3D animation, live-action, anime, 2D animation, stop-motion, editorial, comic book, or any other aesthetic.
 ---
 
-> **SANDBOX R&D triage note (2026-07-03):** related external skill — NOT storyboard-family canon.
-> Overlaps STORYFRAME-V territory (brief → storyboard sheet → motion prompts).
-> Consolidation into STORYFRAME-V vNext is a future gated decision; do not fork logic from here into the family specs.
+> **SANDBOX R&D lane note — RESOLVED 2026-09-23 (supersedes the 2026-07-03 triage note).**
+> The parked consolidation question is **answered: delimit, not consolidate** (Sir, Option B — see
+> `THE SANDBOX/10-ACTIVE/STORYBOARD_BUILDER_CONSOLIDATION_v0.1.md`). RECON found this skill and
+> STORYFRAME-V **overlap in mechanism but not in domain**: this file carries animation and narrative
+> craft vocabulary (anime, stop-motion, hand-drawn, squash & stretch, three-act structure) that
+> STORYFRAME-V has **zero** of, and STORYFRAME-V carries commercial taxonomies this file has no use for.
+>
+> **ROUTING RULE (binding).**
+> • **Commercial / product / brand spot / website** → **STORYFRAME-V** (Modes A–D). It owns that domain
+>   and its validated frame set is a product commercial.
+> • **Narrative / animation / character story** (3D, anime, 2D, stop-motion, live-action drama) →
+>   **this skill.**
+> • Genuinely ambiguous → ask which one, do not guess.
+>
+> **SHOT VOCABULARY DEFERS TO CANON.** The old *"do not fork logic from here into the family specs"*
+> rule is **retired in one direction only**: shot/camera vocabulary now flows **canon → here**, never the
+> reverse. Use STORYFRAME-V **§5.2** (shot *intent*) and **§5.7** (shot *grammar* — size, angle,
+> movement, relational, plus the subject-state axis). Do **not** invent shot vocabulary in this file, and
+> do not push anything from this file back into the family specs.
 
 # Storyboard Prompt Builder
 
@@ -60,7 +76,15 @@ Decompose the story overview into the target panel count (default 15). Each beat
 
 1. **Panel number** (1–15)
 2. **Timecode** (e.g., 00:00 – 01:00 for a 15-second/15-panel breakdown)
-3. **Shot type** — Wide, Medium, Close-up, Low Angle, High Angle, Dynamic, Over-the-shoulder, Macro
+3. **Shot type** — draw from canon, not from this file: **STORYFRAME-V §5.2** for shot *intent*
+   (`establishing`, `reveal`, `macro`, `hero`, `detail`, `tracking`, `wide`, `impact`, `orbit`,
+   `light_sweep`, `environmental`, `endcard`, `reaction`, `comparison`, `testimony`) and **§5.7** for
+   shot *grammar* — size (`close_up`, `extreme_close_up`, `medium`, `extreme_wide`), angle (`overhead`,
+   `top_down`, `aerial`, `low_angle`, `high_angle`, `dutch`, `eye_level`), movement (`handheld`,
+   `static`, `locked_off`, `dolly`, `push_in`, `pull_out`, `pan`, `tilt`) and relational
+   (`over_the_shoulder`, `two_shot`). For character work §5.7 **Axis 2** also gives facing, head,
+   expression and gesture. *(This replaced an 8-item list local to this file, which §5.2 + §5.7 fully
+   cover — consolidation decision 2026-09-23, C2.)*
 4. **Scene description** — one sentence describing what's happening visually
 5. **Action / Dialogue** — any character dialogue or specific actions (can be "None")
 
@@ -81,11 +105,20 @@ Open with the storyboard sheet concept: duration, title, panel count, grid layou
 
 Example opener: *"15-second animated storyboard sheet for a sci-fi adventure short film titled 'The Little Inventor & The Lost Robot'. A complete professional animation storyboard presentation page featuring 15 sequential cinematic panels arranged in a clean 3×5 grid layout."*
 
-The grid layout depends on panel count:
-- 9 panels → 3×3 grid
-- 12 panels → 3×4 grid
-- 15 panels → 3×5 grid (default)
-- 20 panels → 4×5 grid
+The grid layout depends on panel count. **⚠ Notation: this file writes grids as `rows × columns`.**
+STORYFRAME-V §5.2 writes the same grids as `columns × rows`. The geometry agrees — the notation is
+reversed, so the literal string `5×3` means *landscape default* in §5.2 and *vertical flip* here. Always
+state which convention you are using. *(Collision C1, consolidation decision 2026-09-23.)*
+
+| Panels | This file (rows × cols) | §5.2 (cols × rows) | Sheet shape |
+|---|---|---|---|
+| 9 | 3×3 | 3×3 | 3 wide, 3 tall |
+| 12 | 3×4 | 4×3 | 4 wide, 3 tall |
+| 15 *(default)* | 3×5 | 5×3 | **5 wide, 3 tall** |
+| 20 | 4×5 | 5×4 | 5 wide, 4 tall |
+
+The one produced 15-frame run on file (`storyframe-v_validation_run.md`) used *"5×3 grid, 15 frames"* in
+§5.2's convention — i.e. 5 wide, 3 tall.
 
 **B) Style Declaration**
 A rich style block tailored to the user's specified or inferred visual language. This is NOT a fixed line — it adapts completely to the style.
